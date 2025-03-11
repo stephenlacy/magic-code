@@ -1,0 +1,11 @@
+{
+  "name": "magic-code",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "pnpm -r --parallel run dev",
+    "extension": "cd extension && pnpm dev",
+    "build:extension": "cd extension && pnpm build",
+    "pack:extension": "cd extension && pnpm pack"
+  }
+}

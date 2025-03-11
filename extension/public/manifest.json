@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Magic Code",
+  "version": "1.0.0",
+  "description": "Automatically capture and copy magic sign-in codes from your emails",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.svg"
+  },
+  "icons": {
+    "128": "icon.svg"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "alarms",
+    "clipboardWrite",
+    "notifications",
+    "scripting",
+    "storage",
+    "unlimitedStorage",
+    "webRequest",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "http://localhost:5173/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:5173/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["injected-script.js"],
+    "matches": ["http://localhost:5173/*"]
+  }]
+}

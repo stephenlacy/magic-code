@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "dev": "tsx --watch index.ts"
+  },
+  "devDependencies": {
+    "@types/cookie": "^1.0.0",
+    "@types/node": "^22.13.9",
+    "tsx": "^4.19.3"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@hono/node-server": "^1.13.8",
+    "@libsql/client": "^0.14.0",
+    "cheerio": "^1.0.0",
+    "cookie": "^1.0.2",
+    "dotenv": "^16.4.7",
+    "googleapis": "^146.0.0",
+    "hono": "^4.7.4",
+    "node-clipboard": "^1.2.0"
+  }
+}
