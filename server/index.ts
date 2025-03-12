@@ -632,7 +632,7 @@ async function setupGmailWatch(userId: string, accessToken: string, refreshToken
     
     // Set up a new interval (every 20 seconds)
     console.log(`Setting up 20-second polling interval for user ${userId}`);
-    const intervalId = setInterval(() => checkNewEmails(userId, auth), 20000);
+    const intervalId = setInterval(() => checkNewEmails(userId, auth), 5000);
     
     // Store the interval ID
     existingIntervals[userId] = intervalId;
